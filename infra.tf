@@ -228,8 +228,8 @@ resource "aws_rds_cluster" "k3s" {
   db_cluster_parameter_group_name = aws_rds_cluster_parameter_group.k3s.0.name
   availability_zones              = local.aws_azs
   database_name                   = local.db_name
-  master_username                 = local.db_user
-  master_password                 = local.db_pass
+  #master_username                 = local.db_user
+  #master_password                 = local.db_pass
   preferred_maintenance_window    = "fri:11:21-fri:11:51"
   db_subnet_group_name            = aws_db_subnet_group.private.0.id
   vpc_security_group_ids          = [aws_security_group.database.id]
