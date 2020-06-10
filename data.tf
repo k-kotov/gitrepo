@@ -1,7 +1,12 @@
-#data "aws_vpc" "default111" {
-#  default = false
-#  id      = var.vpc_id
-#}
+data "aws_vpc" "default" {
+  default = false
+  id      = var.vpc_id
+}
+
+variable "aws_vpc" {
+  default = "123"
+  }
+
 
 data "aws_subnet_ids" "available" {
   vpc_id = data.aws_vpc.default.id
