@@ -175,11 +175,15 @@ variable "db_name" {
 variable "db_user" {
   type        = string
   description = "Username for RDS database"
+  default = "admin"
+  sensitive = true
 }
 
 variable "db_pass" {
   type        = string
   description = "Password for RDS user"
+  default = "admin"
+  sensitive = true
 }
 
 variable "private_subnets_cidr_blocks" {
