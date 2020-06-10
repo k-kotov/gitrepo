@@ -26,13 +26,6 @@ variable "db_pass" {
   default = "123"
   }
 
-variable "local.db_user" {
-  default = "123"
-  }
-
-variable "local.db_pass" {
-  default = "123"
-  }
 
 locals {
   name                        = var.name
