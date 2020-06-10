@@ -1,13 +1,13 @@
 terraform {
   required_providers {
-    rancher2 = ">= 1.6.0"
+    rancher2 = "2.66.0"
   }
 }
 
 
 provider "aws" {
   region = "us-east-1"
-  version = "1.29.0"
+  
   }
 
 provider "aws" {
