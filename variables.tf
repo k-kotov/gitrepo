@@ -166,15 +166,6 @@ variable "db_instance_type" {
   default = "db.r5.large"
 }
 
-
-
-variable "db_pass" {
-  type        = string
-  description = "Password for RDS user"
-  default = "admin"
-  sensitive = true
-}
-
 variable "private_subnets_cidr_blocks" {
   default     = []
   type        = list
