@@ -26,6 +26,14 @@ variable "db_pass" {
   default = "123"
   }
 
+variable "local.db_user" {
+  default = "123"
+  }
+
+variable "local.db_pass" {
+  default = "123"
+  }
+
 locals {
   name                        = var.name
   install_k3s_version         = var.install_k3s_version
