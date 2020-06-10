@@ -1,10 +1,3 @@
-terraform {
-  required_providers {
-    rancher2 = "2.65.0"
-  }
-}
-
-
 provider "aws" {
   region = "us-east-1"
   
