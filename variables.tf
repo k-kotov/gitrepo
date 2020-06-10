@@ -166,18 +166,7 @@ variable "db_instance_type" {
   default = "db.r5.large"
 }
 
-variable "db_name" {
-  default     = null
-  type        = string
-  description = "Name of database to create in RDS"
-}
 
-variable "db_user" {
-  type        = string
-  description = "Username for RDS database"
-  default = "admin"
-  sensitive = true
-}
 
 variable "db_pass" {
   type        = string
