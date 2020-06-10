@@ -11,9 +11,18 @@ provider "aws" {
 
 provider "aws" {
   alias = "r53"
+  region = "us-east-1"
 }
 
 variable "db_name" {
+  default = "123"
+  }
+
+variable "db_user" {
+  default = "123"
+  }
+
+variable "db_pass" {
   default = "123"
   }
 
