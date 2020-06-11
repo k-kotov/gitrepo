@@ -12,10 +12,10 @@ data "aws_subnet_ids" "available" {
   vpc_id = data.aws_vpc.default.id
 }
 
-data "aws_route53_zone" "dns_zone" {
-  provider = aws.r53
-  name     = local.r53_domain
-}
+#data "aws_route53_zone" "dns_zone" {
+#  provider = aws.r53
+#  name     = local.r53_domain
+#}
 
 data "aws_ami" "ubuntu" {
   most_recent = true
