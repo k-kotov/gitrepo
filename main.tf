@@ -1,6 +1,10 @@
 provider "aws" {
   region = var.region
-  
+    }
+
+variable "region" {
+  type    = list(string)
+  default = ["us-west-1a", "us-east-2"]
   }
 
 provider "aws" {
