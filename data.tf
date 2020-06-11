@@ -1,7 +1,7 @@
-data "aws_vpc" "default" {
-  default = false
-  id      = var.vpc_id
-}
+#data "aws_vpc" "default" {
+#  default = false
+#  id      = var.vpc_id
+#}
 
 variable "aws_vpc" {
   default = "123"
