@@ -1,6 +1,6 @@
 data "aws_vpc" "default" {
   #default = false
-  id      = var.vpc_id
+  id      = "5555555"
 }
 
 variable "aws_vpc" {
