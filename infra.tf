@@ -258,6 +258,7 @@ resource "aws_rds_cluster_instance" "k3s" {
 resource "aws_route53_record" "rancher" {
   count    = local.install_rancher ? local.create_external_nlb : 0
   #zone_id  = data.aws_route53_zone.dns_zone.zone_id
+  zone_id  = "3213131313"
   name     = "${local.name}.${local.domain}"
   type     = "CNAME"
   ttl      = 30
