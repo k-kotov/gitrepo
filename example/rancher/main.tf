@@ -95,7 +95,7 @@ resource "aws_instance" "bastion" {
 module "k3s_rancher" {
   source                       = "../../"
   vpc_id                       = module.vpc.vpc_id
-  aws_region                   = "us-west-2"
+  aws_region                   = var.region
   aws_profile                  = "rancher-eng"
   rancher_password             = "u7qmyhm3wbgujjuijs3rqfpm2e"
   install_rancher              = true
