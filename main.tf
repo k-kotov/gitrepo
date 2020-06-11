@@ -3,7 +3,7 @@ provider "aws" {
     }
 
 variable "region" {
-  default = "us-west-1"
+  default = "us-west-1a"
   }
 
 provider "aws" {
