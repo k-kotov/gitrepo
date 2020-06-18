@@ -6,19 +6,19 @@ variable "rancher_password" {
 
 variable "rancher_version" {
   type        = string
-  default     = "2.3.1"
+  #default     = "2.3.1"
   description = "Version of Rancher to install"
 }
 
 variable "agent_image_id" {
   type        = string
-  default     = null
+ # default     = null
   description = "AMI to use for k3s agent instances"
 }
 
 variable "server_image_id" {
   type        = string
-  default     = null
+ # default     = null
   description = "AMI to use for k3s server instances"
 }
 
@@ -30,25 +30,25 @@ variable "ssh_keys" {
 
 variable "rancher_chart" {
   type        = string
-  default     = "rancher-stable/rancher"
+ # default     = "rancher-stable/rancher"
   description = "Helm chart to use for Rancher install"
 }
 
 variable "name" {
   type        = string
-  default     = "rancher-demo"
+#  default     = "rancher-demo"
   description = "Name for deployment"
 }
 
 variable "letsencrypt_email" {
   type        = string
-  default     = "none@none.com"
+#  default     = "none@none.com"
   description = "LetsEncrypt email address to use"
 }
 
 variable "domain" {
   type    = string
-  default = "eng.rancher.space"
+#  default = "eng.rancher.space"
 }
 
 variable "r53_domain" {
@@ -59,64 +59,64 @@ variable "r53_domain" {
 
 variable "server_instance_type" {
   type    = string
-  default = "m5.large"
+#  default = "m5.large"
 }
 
 variable "agent_instance_type" {
   type    = string
-  default = "m5.large"
+ # default = "m5.large"
 }
 
 variable "server_node_count" {
   type        = number
   default     = 1
-  description = "Number of server nodes to launch"
+#  description = "Number of server nodes to launch"
 }
 
 variable "agent_node_count" {
   type        = number
-  default     = 3
+#  default     = 3
   description = "Number of agent nodes to launch"
 }
 
 variable "db_node_count" {
   type        = number
-  default     = 1
+ # default     = 1
   description = "Number of RDS database instances to launch"
 }
 
 variable "server_instance_ssh_user" {
   type        = string
-  default     = "ubuntu"
+#  default     = "ubuntu"
   description = "Username for sshing into instances"
 }
 
 variable "agent_instance_ssh_user" {
   type        = string
-  default     = "ubuntu"
+ # default     = "ubuntu"
   description = "Username for sshing into instances"
 }
 
 variable "certmanager_version" {
   type        = string
-  default     = "0.9.1"
+#  default     = "0.9.1"
   description = "Version of cert-manager to install"
 }
 
 variable "vpc_id" {
   type        = string
-  default     = null
+ # default     = null
   description = "The vpc id that Rancher should use"
 }
 
 variable "aws_region" {
   type    = string
-  default = null
+#  default = null
 }
 
 variable "aws_profile" {
   type        = string
-  default     = null
+#  default     = null
   description = "Name of the AWS Profile to use for authentication"
 }
 
@@ -128,42 +128,42 @@ variable "public_subnets" {
 
 variable "private_subnets" {
   default     = []
-  type        = list
+#  type        = list
   description = "List of private subnet ids."
 }
 
 variable "install_k3s_version" {
-  default     = "0.9.1"
+ # default     = "0.9.1"
   type        = string
   description = "Version of K3S to install"
 }
 
 variable "k3s_cluster_secret" {
-  default     = null
+ # default     = null
   type        = string
   description = "Override to set k3s cluster registration secret"
 }
 
 variable "extra_server_security_groups" {
-  default     = []
+#  default     = []
   type        = list
   description = "Additional security groups to attach to k3s server instances"
 }
 
 variable "extra_agent_security_groups" {
-  default     = []
+#  default     = []
   type        = list
   description = "Additional security groups to attach to k3s agent instances"
 }
 
 variable "aws_azs" {
-  default     = null
+#  default     = null
   type        = list
   description = "List of AWS Availability Zones in the VPC"
 }
 
 variable "db_instance_type" {
-  default = "db.r5.large"
+ # default = "db.r5.large"
 }
 
 variable "private_subnets_cidr_blocks" {
@@ -179,37 +179,37 @@ variable "public_subnets_cidr_blocks" {
 }
 
 variable "skip_final_snapshot" {
-  default     = true
+#  default     = true
   type        = bool
   description = "Boolean that defines whether or not the final snapshot should be created on RDS cluster deletion"
 }
 
 variable "install_rancher" {
-  default     = false
+ # default     = false
   type        = bool
   description = "Boolean that defines whether or not to install Rancher"
 }
 
 variable "install_nginx_ingress" {
-  default     = false
+#  default     = false
   type        = bool
   description = "Boolean that defines whether or not to install nginx-ingress"
 }
 
 variable "install_certmanager" {
-  default     = false
+#  default     = false
   type        = bool
   description = "Boolean that defines whether or not to install Cert-Manager"
 }
 
 variable "create_external_nlb" {
-  default     = true
+#  default     = true
   type        = bool
   description = "Boolean that defines whether or not to create an external load balancer"
 }
 
 variable "k3s_storage_cafile" {
-  default     = "/srv/rds-combined-ca-bundle.pem"
+#  default     = "/srv/rds-combined-ca-bundle.pem"
   type        = string
   description = "Location to download RDS CA Bundle"
 }
@@ -221,31 +221,31 @@ variable "registration_command" {
 }
 
 variable "k3s_storage_endpoint" {
-  default     = "sqlite"
+ # default     = "sqlite"
   type        = string
   description = "Storage Backend for K3S cluster to use. Valid options are 'sqlite' or 'postgres'"
 }
 
 variable "k3s_disable_agent" {
-  default     = false
+#  default     = false
   type        = bool
   description = "Whether to run the k3s agent on the same host as the k3s server"
 }
 
 variable "k3s_tls_san" {
-  default     = null
+#  default     = null
   type        = string
   description = "Sets k3s tls-san flag to this value instead of the default load balancer"
 }
 
 variable "k3s_deploy_traefik" {
-  default     = true
+#  default     = true
   type        = bool
   description = "Configures whether to deploy traefik ingress or not"
 }
 
 variable "rancher2_token_key" {
-  default     = null
+#  default     = null
   type        = string
   description = "Rancher2 API token for authentication"
 }
