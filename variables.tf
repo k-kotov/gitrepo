@@ -1,6 +1,6 @@
 variable "rancher_password" {
   type        = string
- # default     = ""
+  default     = ""
   description = "Password to set for admin user during bootstrap of Rancher Server"
 }
 
@@ -24,7 +24,7 @@ variable "server_image_id" {
 
 variable "ssh_keys" {
   type        = list
- # default     = []
+  default     = []
   description = "SSH keys to inject into Rancher instances"
 }
 
