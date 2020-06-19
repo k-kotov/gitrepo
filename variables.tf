@@ -1,18 +1,18 @@
 variable "rancher_password" {
   type        = string
-  default     = ""
+ # default     = ""
   description = "Password to set for admin user during bootstrap of Rancher Server"
 }
 
 variable "rancher_version" {
   type        = string
-  default     = "2.3.1"
+  #default     = "2.3.1"
   description = "Version of Rancher to install"
 }
 
 variable "agent_image_id" {
   type        = string
-  default     = null
+  #default     = null
   description = "AMI to use for k3s agent instances"
 }
 
@@ -24,53 +24,53 @@ variable "server_image_id" {
 
 variable "ssh_keys" {
   type        = list
-  default     = []
+ # default     = []
   description = "SSH keys to inject into Rancher instances"
 }
 
 variable "rancher_chart" {
   type        = string
-  default     = "rancher-stable/rancher"
+ # default     = "rancher-stable/rancher"
   description = "Helm chart to use for Rancher install"
 }
 
 variable "name" {
   type        = string
-  default     = "rancher-demo"
+ # default     = "rancher-demo"
   description = "Name for deployment"
 }
 
 variable "letsencrypt_email" {
   type        = string
- default     = "none@none.com"
+ #default     = "none@none.com"
   description = "LetsEncrypt email address to use"
 }
 
 variable "domain" {
   type    = string
-  default = "eng.rancher.space"
+#  default = "eng.rancher.space"
 }
 
 variable "r53_domain" {
   type        = string
   default     = ""
-  description = "DNS domain for Route53 zone (defaults to domain if unset)"
+ # description = "DNS domain for Route53 zone (defaults to domain if unset)"
 }
 
 variable "server_instance_type" {
   type    = string
-  default = "m5.large"
+ # default = "m5.large"
 }
 
 variable "agent_instance_type" {
   type    = string
- default = "m5.large"
+# default = "m5.large"
 }
 
 variable "server_node_count" {
   type        = number
   default     = 1
-  description = "Number of server nodes to launch"
+ # description = "Number of server nodes to launch"
 }
 
 variable "agent_node_count" {
