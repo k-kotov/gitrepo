@@ -30,47 +30,47 @@ variable "ssh_keys" {
 
 variable "rancher_chart" {
   type        = string
- # default     = "rancher-stable/rancher"
+  default     = "rancher-stable/rancher"
   description = "Helm chart to use for Rancher install"
 }
 
 variable "name" {
   type        = string
- # default     = "rancher-demo"
+  default     = "rancher-demo"
   description = "Name for deployment"
 }
 
 variable "letsencrypt_email" {
   type        = string
- #default     = "none@none.com"
+ default     = "none@none.com"
   description = "LetsEncrypt email address to use"
 }
 
 variable "domain" {
   type    = string
-#  default = "eng.rancher.space"
+  default = "eng.rancher.space"
 }
 
 variable "r53_domain" {
   type        = string
   default     = ""
- # description = "DNS domain for Route53 zone (defaults to domain if unset)"
+  description = "DNS domain for Route53 zone (defaults to domain if unset)"
 }
 
 variable "server_instance_type" {
   type    = string
- # default = "m5.large"
+  default = "m5.large"
 }
 
 variable "agent_instance_type" {
   type    = string
-# default = "m5.large"
+ default = "m5.large"
 }
 
 variable "server_node_count" {
   type        = number
   default     = 1
- # description = "Number of server nodes to launch"
+  description = "Number of server nodes to launch"
 }
 
 variable "agent_node_count" {
