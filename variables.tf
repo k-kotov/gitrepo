@@ -6,19 +6,19 @@ variable "rancher_password" {
 
 variable "rancher_version" {
   type        = string
-  #default     = "2.3.1"
+  default     = {}
   description = "Version of Rancher to install"
 }
 
 variable "agent_image_id" {
   type        = string
-  #default     = null
+  default     = null
   description = "AMI to use for k3s agent instances"
 }
 
 variable "server_image_id" {
   type        = string
-  default     = null
+  default     = ()
   description = "AMI to use for k3s server instances"
 }
 
