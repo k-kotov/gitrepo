@@ -11,7 +11,7 @@ variable "rancher_version" {
 }
 
 variable "agent_image_id" {
-  type        = string
+ # type        = string
   default     = null
   description = "AMI to use for k3s agent instances"
 }
