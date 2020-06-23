@@ -18,7 +18,7 @@ variable "agent_image_id" {
 
 variable "server_image_id" {
   type        = string
-  default     = ()
+  default     = null
   description = "AMI to use for k3s server instances"
 }
 
